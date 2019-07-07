@@ -6,7 +6,7 @@ import Layout from "../components/layout/defaultLayout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import "../styles/_custom.scss"
-import $ from "jquery"
+import $ from "jquery";
 
 const IndexPage = props => {
   const images = get(props, "data.allImageSharp.nodes") || []
