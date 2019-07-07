@@ -18,7 +18,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home Page" />
-      <section>
+      <section id="home">
         <div className={`text-center ${styles.hero} position-relative`}>
           <h1 className="text-white">Front End Web Developer</h1>
         </div>
@@ -294,7 +294,7 @@ const IndexPage = props => {
             <form
               method="get"
               className="d-flex justify-content-center mr-1"
-              action="assets/downloads/resume.pdf"
+              action="./resume.pdf"
             >
               <button
                 type="submit"
@@ -397,36 +397,6 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-      {/* <footer
-        className="p-2 d-block d-md-flex justify-content-between anchor content-footer text-center align-items-center"
-        id="contact"
-      >
-        <p className="text-white">
-          Icons by{" "}
-          <a
-            href="https://www.flaticon.com/authors/gregor-cresnar"
-            title="Gregor Cresnar"
-          >
-            Gregor Cresnar
-          </a>{" "}
-          -{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>{" "}
-          -{" "}
-          <a
-            href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            CC 3.0 BY
-          </a>
-        </p>
-        <p className="text-white">
-          <span>&#169</span> Ryan Johnson, 2019
-        </p>
-      </footer> */}
     </Layout>
   )
 }

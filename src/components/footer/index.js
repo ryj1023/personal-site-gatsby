@@ -29,7 +29,8 @@ const Footer = () => {
         </a>
       </p>
       <p className="text-white">
-        <span>&#169</span> Ryan Johnson, 2019
+        <span dangerouslySetInnerHTML={{ __html: "&#169" }} />
+        <span className="ml-1">Ryan Johnson, 2019</span>
       </p>
     </footer>
   )

@@ -3,7 +3,7 @@ import React from "react"
 import styles from "./styles.module.scss"
 
 const Header = () => (
-  <section className="header position-sticky">
+  <section className={`${styles.header} position-sticky`}>
     <nav
       className={`${styles.navBar} navbar navbar-expand-lg navbar-light w-100 p-0`}
     >
@@ -23,7 +23,7 @@ const Header = () => (
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto d-flex align-items-center">
           <li className="nav-item text-center w-100">
-            <a className="nav-link home w-100 p-4 p-lg-2" href="#">
+            <a className="nav-link home w-100 p-4 p-lg-2" href="#home">
               <span>Ryan Johnson</span>
             </a>
           </li>

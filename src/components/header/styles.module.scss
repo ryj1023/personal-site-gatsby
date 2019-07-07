@@ -1,4 +1,10 @@
 @import "../../styles/_variables.scss";
 .navBar {
   background: $primary;
+  height: 50px;
+}
+
+.header {
+  top: 0;
+  z-index: 1;
 }

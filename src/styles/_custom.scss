@@ -1,4 +1,18 @@
 @import "./_variables.scss";
+h1,
+h2,
+.home,
+button {
+  font-family: "Anton", sans-serif;
+}
+
+a {
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
 
 .navbar-toggler div {
   width: 40px;

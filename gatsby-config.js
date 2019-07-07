@@ -27,6 +27,14 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     "gatsby-plugin-netlify",
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Anton"],
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
