@@ -1,0 +1,109 @@
+@import "../_variables.scss";
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../images/IMG_3336.jpeg");
+  /* Set a specific height */
+  min-height: 450px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+h1,
+.home {
+  font-size: 20px;
+}
+
+h1,
+h2,
+.home,
+button {
+  font-family: "Anton", sans-serif;
+}
+.navBar {
+  min-height: 50px;
+}
+
+.personalProjects {
+  background: $primary;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bullet-list-text {
+  margin-top: 0.2rem;
+}
+
+.projectImage {
+  width: 100%;
+  height: 300px;
+}
+
+.social img {
+  width: 40px;
+}
+
+.buttonDownload {
+  border-radius: 2rem;
+  border-color: #222222 !important;
+}
+
+.buttonDownload:hover {
+  background: #222222 !important;
+  color: white !important;
+}
+
+body,
+.featuredWork {
+  background: rgb(34, 34, 34) !important;
+}
+
+#projectsCarousel {
+  min-height: 400px;
+}
+
+.quoteCarousel p {
+  max-width: 700px;
+  font-size: 1.4em;
+}
+.quoteAuthor {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.bulletPointList {
+  background: #fff9e9;
+  border-top: 6px;
+  border-color: #ffd220;
+}
+
+@media screen and (max-width: 992px) {
+  .navBar {
+    min-height: 80px;
+  }
+  .hero {
+    background-size: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navBar {
+    min-height: 80px;
+  }
+}
