@@ -289,7 +289,9 @@ const IndexPage = props => {
         </div>
         <div>
           <div
-            className={`d-flex justify-content-center ${styles.social} m-0 pb-2`}
+            className={`d-flex justify-content-center ${
+              styles.social
+            } m-0 pb-2`}
           >
             <form
               method="get"
@@ -298,7 +300,9 @@ const IndexPage = props => {
             >
               <button
                 type="submit"
-                className={`font-weight-bold text-dark ${styles.buttonDownload} bd-white p-2`}
+                className={`font-weight-bold text-dark ${
+                  styles.buttonDownload
+                } bd-white p-2`}
               >
                 Download Resume
               </button>
@@ -337,7 +341,9 @@ const IndexPage = props => {
             style={{ height: "200px" }}
           >
             <blockquote
-              className={`${styles.quoteCarousel} carousel-item text-center active`}
+              className={`${
+                styles.quoteCarousel
+              } carousel-item text-center active`}
             >
               <p className="d-block w-100 m-auto">
                 “We forget: In life, it doesn’t matter what happens to you or
@@ -408,7 +414,6 @@ export const ImagesQuery = graphql`
         id
         fluid {
           src
-          sizes
           originalImg
           originalName
         }
