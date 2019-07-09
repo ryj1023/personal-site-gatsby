@@ -5,15 +5,33 @@ import styles from "../styles/page_modules/home.module.scss"
 import Layout from "../components/layout/defaultLayout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import "../styles/_custom.scss"
-import $ from "jquery";
+import "../styles/styles.scss"
+import Slider from "react-slick"
+
+var projectSlickSettings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+}
+
+var quoteSlickSettings = {
+  dots: false,
+  infinite: true,
+  speed: 700,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoPlaySpeed: 10000,
+}
 
 const IndexPage = props => {
   const images = get(props, "data.allImageSharp.nodes") || []
   useEffect(() => {
-    $("#quote-carousel").carousel({
-      interval: 5000,
-    })
+    // $("#quote-carousel").carousel({
+    //   interval: 5000,
+    // })
   }, [])
   return (
     <Layout>
@@ -146,107 +164,107 @@ const IndexPage = props => {
           </div>
 
           <div className="col-12">
-            <div
-              id={`${styles.projectsCarousel}`}
-              className="carousel slide d-flex align-items-center"
-              data-interval="false"
-            >
-              <div className="carousel-inner">
-                <div className="carousel-item px-2">
-                  <div className="card my-3">
-                    <div className="card-body row">
-                      <div className="col-12 col-md-6">
-                        <a
-                          href="https://discover-new-music.herokuapp.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Image
-                            className={styles.projectImage}
-                            allImages={images}
-                            imageName="Discover-New-Music.png"
-                          />
-                        </a>
-                      </div>
-                      <div className="col-12 col-md-6 d-none d-md-flex">
-                        <p>
-                          This app is for anyone that's really into music (isn't
-                          everybody anyway?). Finally a place where the someone
-                          can find new sounds based on artists and bands they
-                          listen to, and also get tickets for any upcoming shows
-                          in their area. Think Spotify, YouTube, and StubHub all
-                          in one.
-                        </p>
-                      </div>
+            <Slider {...projectSlickSettings}>
+              <div className="carousel-item px-2">
+                <div className="card my-3">
+                  <div className="card-body row">
+                    <div className="col-12 col-md-6">
+                      <a
+                        href="https://discover-new-music.herokuapp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          className={styles.projectImage}
+                          allImages={images}
+                          imageName="Discover-New-Music.png"
+                        />
+                      </a>
                     </div>
-                  </div>
-                </div>
-                <div className="carousel-item active px-2">
-                  <div className="card my-3">
-                    <div className="card-body row">
-                      <div className="col-12 col-md-6">
-                        <a
-                          href="https://solixfit.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Image
-                            allImages={images}
-                            className={styles.projectImage}
-                            imageName="solixfit.png"
-                          />
-                        </a>
-                      </div>
-                      <div className="col-12 col-md-6 d-none d-md-flex">
-                        <p>
-                          Solixfit is the ultimate workout and nutrition logging
-                          platform. This mobile app, written in React-Native,
-                          removes all the complexity of keeping track of
-                          everything you are eating and how well you are keeping
-                          up with your work out regimen, allowing you to focus
-                          on being the best version of yourself. With features
-                          like a color-coded nutrition goal system, acheivement
-                          badges, and the ablity to share your achievements with
-                          your daily logs, this app is truly a all-in-one
-                          solution for those who are serius about getting (and
-                          staying) healthy.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="carousel-item px-2">
-                  <div className="card my-3">
-                    <div className="card-body row">
-                      <div className="col-12 col-md-6">
-                        <a
-                          href="https://fitness-assessment.herokuapp.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Image
-                            allImages={images}
-                            imageName="Fitness-Assessment-Screenshot.png"
-                            className={styles.projectImage}
-                          />
-                        </a>
-                      </div>
-                      <div className="col-12 col-md-6 d-none d-md-flex">
-                        <p>
-                          This fitness assessment is a perfect platform for
-                          users all over the fitness spectrum. It is made to
-                          obtain information about the user by asking a series
-                          of questions about weight, height, goals, and current
-                          fitness activity. It then takes this information,
-                          displays a reccommended daily nutrient intake, allows
-                          a food search which returns nutrient information, and
-                          selects custom workout regimens for the user.
-                        </p>
-                      </div>
+                    <div className="col-12 col-md-6 d-none d-md-flex">
+                      <p>
+                        This app is for anyone that's really into music (isn't
+                        everybody anyway?). Finally a place where the someone
+                        can find new sounds based on artists and bands they
+                        listen to, and also get tickets for any upcoming shows
+                        in their area. Think Spotify, YouTube, and StubHub all
+                        in one.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="carousel-item active px-2">
+                <div className="card my-3">
+                  <div className="card-body row">
+                    <div className="col-12 col-md-6">
+                      <a
+                        href="https://solixfit.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          allImages={images}
+                          className={styles.projectImage}
+                          imageName="solixfit.png"
+                        />
+                      </a>
+                    </div>
+                    <div className="col-12 col-md-6 d-none d-md-flex">
+                      <p>
+                        Solixfit is the ultimate workout and nutrition logging
+                        platform. This mobile app, written in React-Native,
+                        removes all the complexity of keeping track of
+                        everything you are eating and how well you are keeping
+                        up with your work out regimen, allowing you to focus on
+                        being the best version of yourself. With features like a
+                        color-coded nutrition goal system, acheivement badges,
+                        and the ablity to share your achievements with your
+                        daily logs, this app is truly a all-in-one solution for
+                        those who are serius about getting (and staying)
+                        healthy.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="carousel-item px-2">
+                <div className="card my-3">
+                  <div className="card-body row">
+                    <div className="col-12 col-md-6">
+                      <a
+                        href="https://fitness-assessment.herokuapp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          allImages={images}
+                          imageName="Fitness-Assessment-Screenshot.png"
+                          className={styles.projectImage}
+                        />
+                      </a>
+                    </div>
+                    <div className="col-12 col-md-6 d-none d-md-flex">
+                      <p>
+                        This fitness assessment is a perfect platform for users
+                        all over the fitness spectrum. It is made to obtain
+                        information about the user by asking a series of
+                        questions about weight, height, goals, and current
+                        fitness activity. It then takes this information,
+                        displays a reccommended daily nutrient intake, allows a
+                        food search which returns nutrient information, and
+                        selects custom workout regimens for the user.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Slider>
+            {/* <div
+              id={`${styles.projectsCarousel}`}
+              className="carousel slide d-flex align-items-center"
+              data-interval="false"
+            >
               <a
                 className="carousel-control-prev"
                 href={`#${styles.projectsCarousel}`}
@@ -265,7 +283,7 @@ const IndexPage = props => {
                 <Image allImages={images} imageName="next.png" />
                 <span className="sr-only">Next</span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -289,9 +307,7 @@ const IndexPage = props => {
         </div>
         <div>
           <div
-            className={`d-flex justify-content-center ${
-              styles.social
-            } m-0 pb-2`}
+            className={`d-flex justify-content-center ${styles.social} m-0 pb-2`}
           >
             <form
               method="get"
@@ -300,9 +316,7 @@ const IndexPage = props => {
             >
               <button
                 type="submit"
-                className={`font-weight-bold text-dark ${
-                  styles.buttonDownload
-                } bd-white p-2`}
+                className={`font-weight-bold text-dark ${styles.buttonDownload} bd-white p-2`}
               >
                 Download Resume
               </button>
@@ -331,77 +345,68 @@ const IndexPage = props => {
             </a>
           </div>
         </div>
-        <div
-          id="quote-carousel"
-          className="carousel slide"
-          data-ride="carousel"
-        >
-          <div
-            className="carousel-inner d-flex align-items-center"
-            style={{ height: "200px" }}
+        <Slider {...quoteSlickSettings}>
+          {/* <div style={{ height: "200px" }}> */}
+          <blockquote
+            className={`${styles.quoteCarousel} carousel-item text-center`}
           >
-            <blockquote
-              className={`${
-                styles.quoteCarousel
-              } carousel-item text-center active`}
-            >
-              <p className="d-block w-100 m-auto">
-                “We forget: In life, it doesn’t matter what happens to you or
-                where you came from. It matters what you do with what happens
-                and what you’ve been given.”
-              </p>
-              <cite className="m-auto">
-                <span className={`${styles.quoteAuthor}`}>- Ryan Holliday</span>
-              </cite>
-            </blockquote>
-            <blockquote
-              className={`${styles.quoteCarousel} carousel-item text-center`}
-            >
-              <p className="d-block w-100 m-auto">
-                “Have no fear of perfection—you’ll never reach it.”
-              </p>
-              <cite className="m-auto">
-                <span className={`${styles.quoteAuthor}`}>–Salvador Dali</span>
-              </cite>
-            </blockquote>
-            <blockquote
-              className={`${styles.quoteCarousel} carousel-item text-center`}
-            >
-              <p className="d-block w-100 m-auto">
-                "Things that are traditionally sync don’t have to “feel” sync.
-                Things that are traditionally async don’t have to 'feel' async.
-                Be intentional and bridge the gap when you need."
-              </p>
-              <cite className="m-auto">
-                <span className={`${styles.quoteAuthor}`}>- Dan Abramov</span>
-              </cite>
-            </blockquote>
-            <blockquote
-              className={`${styles.quoteCarousel} carousel-item text-center`}
-            >
-              <p className="d-block w-100 m-auto">
-                "I have been impressed with the urgency of doing. Knowing is not
-                enough; we must apply. Being willing is not enough; we must do."
-              </p>
-              <cite className="m-auto">
-                <span className={`${styles.quoteAuthor}`}>
-                  - Leonardo da Vinci
-                </span>
-              </cite>
-            </blockquote>
-            <blockquote
-              className={`${styles.quoteCarousel} carousel-item text-center`}
-            >
-              <p className="d-block w-100 m-auto">
-                “Design is not just what it looks like and feels like. Design is
-                how it works.”
-              </p>
-              <cite className="m-auto">
-                <span className={`${styles.quoteAuthor}`}>- Steve Jobs</span>
-              </cite>
-            </blockquote>
-          </div>
-        </div>
+            <p className="d-block w-100 m-auto">
+              “We forget: In life, it doesn’t matter what happens to you or
+              where you came from. It matters what you do with what happens and
+              what you’ve been given.”
+            </p>
+            <cite className="m-auto">
+              <span className={`${styles.quoteAuthor}`}>- Ryan Holliday</span>
+            </cite>
+          </blockquote>
+          <blockquote
+            className={`${styles.quoteCarousel} carousel-item text-center`}
+          >
+            <p className="d-block w-100 m-auto">
+              “Have no fear of perfection—you’ll never reach it.”
+            </p>
+            <cite className="m-auto">
+              <span className={`${styles.quoteAuthor}`}>–Salvador Dali</span>
+            </cite>
+          </blockquote>
+          <blockquote
+            className={`${styles.quoteCarousel} carousel-item text-center`}
+          >
+            <p className="d-block w-100 m-auto">
+              "Things that are traditionally sync don’t have to “feel” sync.
+              Things that are traditionally async don’t have to 'feel' async. Be
+              intentional and bridge the gap when you need."
+            </p>
+            <cite className="m-auto">
+              <span className={`${styles.quoteAuthor}`}>- Dan Abramov</span>
+            </cite>
+          </blockquote>
+          <blockquote
+            className={`${styles.quoteCarousel} carousel-item text-center`}
+          >
+            <p className="d-block w-100 m-auto">
+              "I have been impressed with the urgency of doing. Knowing is not
+              enough; we must apply. Being willing is not enough; we must do."
+            </p>
+            <cite className="m-auto">
+              <span className={`${styles.quoteAuthor}`}>
+                - Leonardo da Vinci
+              </span>
+            </cite>
+          </blockquote>
+          <blockquote
+            className={`${styles.quoteCarousel} carousel-item text-center`}
+          >
+            <p className="d-block w-100 m-auto">
+              “Design is not just what it looks like and feels like. Design is
+              how it works.”
+            </p>
+            <cite className="m-auto">
+              <span className={`${styles.quoteAuthor}`}>- Steve Jobs</span>
+            </cite>
+          </blockquote>
+          {/* </div> */}
+        </Slider>
       </section>
     </Layout>
   )

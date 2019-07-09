@@ -1,0 +1,11 @@
+@import "./_custom.scss";
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
+.slick-prev {
+  padding-left: 10px;
+}
+
+.slick-next {
+  padding-right: 30px;
+}
