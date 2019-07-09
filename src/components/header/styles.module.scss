@@ -2,6 +2,8 @@
 .navBar {
   background: $primary;
   height: 50px;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
 }
 
 .header {

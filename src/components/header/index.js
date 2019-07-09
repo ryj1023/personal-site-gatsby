@@ -4,7 +4,29 @@ import styles from "./styles.module.scss"
 
 const Header = () => (
   <section className={`${styles.header} position-sticky`}>
-    <nav
+    <nav className={`${styles.navBar} w-100 p-0`}>
+      <ul className="d-flex align-items-center mb-0 h-100 list-unstyled">
+        <li className="text-center">
+          <a className="nav-link home w-100 p-lg-2" href="#home">
+            <span>Ryan Johnson</span>
+          </a>
+        </li>
+        <li className="text-center">
+          <a className="nav-link w-100 font-weight-bold p-lg-2" href="#about">
+            About <span className="sr-only">(current)</span>
+          </a>
+        </li>
+        <li className="text-center">
+          <a
+            className="nav-link w-100 font-weight-bold p-lg-2"
+            href="#portfolio"
+          >
+            Portfolio <span className="sr-only">(current)</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    {/* <nav
       className={`${styles.navBar} navbar navbar-expand-lg navbar-light w-100 p-0`}
     >
       <button
@@ -45,7 +67,7 @@ const Header = () => (
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> */}
   </section>
 )
 
