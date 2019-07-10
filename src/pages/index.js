@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import get from "lodash.get"
 import styles from "../styles/page_modules/home.module.scss"
@@ -11,7 +11,7 @@ import Slider from "react-slick"
 var projectSlickSettings = {
   dots: false,
   infinite: true,
-  speed: 500,
+  speed: 800,
   slidesToShow: 1,
   slidesToScroll: 1,
 }
@@ -28,15 +28,11 @@ var quoteSlickSettings = {
 
 const IndexPage = props => {
   const images = get(props, "data.allImageSharp.nodes") || []
-  useEffect(() => {
-    // $("#quote-carousel").carousel({
-    //   interval: 5000,
-    // })
-  }, [])
   return (
     <Layout>
       <SEO title="Home Page" />
-      <section id="home">
+
+      <section>
         <div className={`text-center ${styles.hero} position-relative`}>
           <h1 className="text-white">Front End Web Developer</h1>
         </div>
@@ -162,7 +158,6 @@ const IndexPage = props => {
           <div className={`py-2 text-center w-100 ${styles.personalProjects}`}>
             <h1 className="text-white mb-0">Personal Projects</h1>
           </div>
-
           <div className="col-12">
             <Slider {...projectSlickSettings}>
               <div className="carousel-item px-2">

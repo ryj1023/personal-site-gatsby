@@ -39,8 +39,7 @@ $(document).ready(() => {
        */
       scrollIfAnchor: function(href, pushToHistory) {
         var match, rect, anchorOffset
-
-        if (href === "#") {
+        if (href === "#home") {
           $("html, body").animate({ scrollTop: 0 }, 500)
         }
 
