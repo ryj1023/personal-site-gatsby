@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 import get from "lodash.get"
 import styles from "../styles/page_modules/home.module.scss"
 import Layout from "../components/layout/defaultLayout"
@@ -307,11 +307,11 @@ const IndexPage = props => {
             <form
               method="get"
               className="d-flex justify-content-center mr-1"
-              action="./resume.pdf"
+              action={withPrefix("/resume.pdf")}
             >
               <button
                 type="submit"
-                className={`font-weight-bold text-dark ${styles.buttonDownload} bd-white p-2`}
+                className={`text-nowrap font-weight-bold text-dark ${styles.buttonDownload} bg-white p-2`}
               >
                 Download Resume
               </button>
