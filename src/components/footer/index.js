@@ -5,7 +5,7 @@ import ReactTooltip from "react-tooltip"
 const Footer = () => {
   return (
     <footer
-      className={`p-2 d-block d-md-flex justify-content-between anchor ${styles.contentFooter} text-center align-items-center`}
+      className={`p-2 d-flex justify-content-between anchor ${styles.contentFooter} text-center align-items-center`}
       id="contact"
     >
       <ReactTooltip id="credits" className="react-tooltip-clickable-link">

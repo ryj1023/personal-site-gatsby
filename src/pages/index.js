@@ -19,11 +19,11 @@ var projectSlickSettings = {
 var quoteSlickSettings = {
   dots: false,
   infinite: true,
-  speed: 700,
+  speed: 800,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoPlaySpeed: 10000,
+  autoplaySpeed: 10000,
 }
 
 const IndexPage = props => {
