@@ -293,7 +293,7 @@ const IndexPage = props => {
               download="Ryan Johnson's Resume"
               className={`font-weight-bold ${styles.buttonDownload} text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
             >
-              Download Resume
+              Resume
             </a>
             <a
               href="https://github.com/ryj1023"
