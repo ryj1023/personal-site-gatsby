@@ -14,6 +14,14 @@ module.exports = {
         // ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pdfs`,
+        path: `${__dirname}/src/pdf/`,
+        // ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, withPrefix } from "gatsby"
+import { graphql } from "gatsby"
 import get from "lodash.get"
 import styles from "../styles/page_modules/home.module.scss"
 import Layout from "../components/layout/defaultLayout"
@@ -26,8 +26,16 @@ var quoteSlickSettings = {
   autoplaySpeed: 10000,
 }
 
+const getResumePDF = props => {
+  const pdfs = get(props, "data.pdfs.edges") || []
+  const found = pdfs.find(pdf => pdf.node.name === "Resume") || {}
+  const url = get(found, "node.publicURL") || ""
+  return url
+}
+
 const IndexPage = props => {
   const images = get(props, "data.allImageSharp.nodes") || []
+  const resumeURL = getResumePDF(props)
   return (
     <Layout>
       <SEO title="Home Page" />
@@ -255,30 +263,6 @@ const IndexPage = props => {
                 </div>
               </div>
             </Slider>
-            {/* <div
-              id={`${styles.projectsCarousel}`}
-              className="carousel slide d-flex align-items-center"
-              data-interval="false"
-            >
-              <a
-                className="carousel-control-prev"
-                href={`#${styles.projectsCarousel}`}
-                role="button"
-                data-slide="prev"
-              >
-                <Image allImages={images} imageName="prev.png" />
-                <span className="sr-only">Previous</span>
-              </a>
-              <a
-                className="carousel-control-next"
-                href={`#${styles.projectsCarousel}`}
-                role="button"
-                data-slide="next"
-              >
-                <Image allImages={images} imageName="next.png" />
-                <span className="sr-only">Next</span>
-              </a>
-            </div> */}
           </div>
         </div>
       </section>
@@ -305,9 +289,9 @@ const IndexPage = props => {
             className={`d-flex justify-content-center ${styles.social} m-0 pb-2`}
           >
             <a
-              href={withPrefix("/resume.pdf")}
+              href={resumeURL}
               download="Ryan Johnson's Resume"
-              className={`text-nowrap font-weight-bold ${styles.buttonDownload} text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
+              className={`font-weight-bold ${styles.buttonDownload} text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
             >
               Download Resume
             </a>
@@ -411,6 +395,14 @@ export const ImagesQuery = graphql`
           src
           originalImg
           originalName
+        }
+      }
+    }
+    pdfs: allFile(filter: { sourceInstanceName: { eq: "pdfs" } }) {
+      edges {
+        node {
+          name
+          publicURL
         }
       }
     }
