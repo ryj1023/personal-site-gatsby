@@ -306,7 +306,7 @@ const IndexPage = props => {
           >
             <a
               href={withPrefix("/resume.pdf")}
-              download
+              download="Ryan Johnson's Resume"
               className={`text-nowrap font-weight-bold ${styles.buttonDownload} text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
             >
               Download Resume
