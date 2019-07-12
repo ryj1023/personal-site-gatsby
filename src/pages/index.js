@@ -304,20 +304,13 @@ const IndexPage = props => {
           <div
             className={`d-flex justify-content-center ${styles.social} m-0 pb-2`}
           >
-            {/* <form
-              method="get"
-              className="d-flex justify-content-center mr-1"
-              action={withPrefix("/resume.pdf")}
-            > */}
-
             <a
-              // type="submit"
               href={withPrefix("/resume.pdf")}
+              download
               className={`text-nowrap font-weight-bold ${styles.buttonDownload} text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
             >
               Download Resume
             </a>
-            {/* </form> */}
             <a
               href="https://github.com/ryj1023"
               target="_blank"
