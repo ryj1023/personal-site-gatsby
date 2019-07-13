@@ -4,19 +4,11 @@ h2,
 .home,
 button {
   font-family: "Anton", sans-serif;
-  font-display: fallback; /* <- this can be added to each @font-face definition */
 }
 
-// @font-face {
-//   h1,
-//   h2,
-//   .home,
-//   button {
-//     font-family: "Anton";
-
-//     font-display: fallback; /* <- this can be added to each @font-face definition */
-//   }
-// }
+.home {
+  font-size: 20px;
+}
 
 a {
   color: #007bff;

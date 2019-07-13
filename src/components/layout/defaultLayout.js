@@ -1,12 +1,10 @@
-import React, { useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import Footer from "../footer"
 import Header from "../header"
+import "../../styles/styles.scss"
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    require("../../util/scrollspy")
-  }, [])
   return (
     <>
       <Header />

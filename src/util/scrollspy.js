@@ -12,7 +12,8 @@ $(document).ready(() => {
 
     var anchorScrolls = {
       ANCHOR_REGEX: /^#[^ ]+$/,
-      OFFSET_HEIGHT_PX: window.innerWidth > 992 ? 46 : 80,
+      // OFFSET_HEIGHT_PX: window.innerWidth > 992 ? 46 : 80,
+      OFFSET_HEIGHT_PX: 46,
 
       /**
        * Establish events, and fix initial scroll position if a hash is provided.
@@ -52,6 +53,7 @@ $(document).ready(() => {
         if (match) {
           rect = match.getBoundingClientRect()
           anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset()
+          console.log("anchorOffset", anchorOffset)
           $("html, body").animate({ scrollTop: anchorOffset }, 500)
           // window.scrollTo(window.pageXOffset, anchorOffset);
           // Add the state to history as-per normal anchor links
@@ -83,6 +85,6 @@ $(document).ready(() => {
         }
       },
     }
-    anchorScrolls.init()
+    setTimeout(() => anchorScrolls.init(), 1000)
   })(window.document, window.history, window.location)
 })

@@ -1,11 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import get from "lodash.get"
-import styles from "../styles/page_modules/home.module.scss"
-import Layout from "../components/layout/defaultLayout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import "../styles/styles.scss"
+import styles from "./styles.module.scss"
+import Layout from "../../components/layout/defaultLayout"
+import Image from "../../components/image"
+import SEO from "../../components/seo"
 import Slider from "react-slick"
 
 var projectSlickSettings = {
@@ -34,12 +33,14 @@ const getResumePDF = props => {
 }
 
 const IndexPage = props => {
+  useEffect(() => {
+    require("../../util/scrollspy")
+  }, [])
   const images = get(props, "data.allImageSharp.nodes") || []
   const resumeURL = getResumePDF(props)
   return (
     <Layout>
       <SEO title="Home Page" />
-
       <section>
         <div className={`text-center ${styles.hero} position-relative`}>
           <h1 className="text-white">Front End Web Developer</h1>

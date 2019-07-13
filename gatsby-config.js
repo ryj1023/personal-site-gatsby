@@ -36,11 +36,14 @@ module.exports = {
     `gatsby-plugin-sass`,
     "gatsby-plugin-netlify",
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ["Anton"],
-        },
+        fonts: [
+          {
+            family: `Anton`,
+            subsets: [`latin`],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

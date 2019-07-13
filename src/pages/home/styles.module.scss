@@ -1,4 +1,4 @@
-@import "../_variables.scss";
+@import "../../styles/_variables.scss";
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -17,10 +17,6 @@
   width: 100%;
   top: 0;
   z-index: 2;
-}
-h1,
-.home {
-  font-size: 20px;
 }
 
 .navBar {
