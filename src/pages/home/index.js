@@ -23,6 +23,7 @@ var quoteSlickSettings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 10000,
+  arrows: false,
 }
 
 const getResumePDF = props => {
@@ -91,9 +92,6 @@ const IndexPage = props => {
               </p>
             </section>
             <div className="m-auto d-flex justify-content-center m-3">
-              <div className="d-none d-lg-inline-block">
-                <Image allImages={images} imageName="professor.png" />
-              </div>
               <div className={`${styles.bulletPointList} p-2 m-3`}>
                 <div className="d-flex">
                   <div>
@@ -169,8 +167,8 @@ const IndexPage = props => {
         <div className={`anchor row ${styles.featuredWork}`} id="portfolio">
           <div className="col-12">
             <Slider {...projectSlickSettings}>
-              <div className="carousel-item">
-                <div className="card rounded-0 m-3">
+              <div className="carousel-item px-2">
+                <div className="card rounded-0 my-4">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
                       <a
@@ -199,7 +197,7 @@ const IndexPage = props => {
                 </div>
               </div>
               <div className="carousel-item active px-2">
-                <div className="card my-3">
+                <div className="card rounded-0 my-4">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
                       <a
@@ -216,24 +214,21 @@ const IndexPage = props => {
                     </div>
                     <div className="col-12 col-md-6 d-none d-md-flex">
                       <p>
-                        Solixfit is the ultimate workout and nutrition logging
-                        platform. This mobile app, written in React-Native,
-                        removes all the complexity of keeping track of
-                        everything you are eating and how well you are keeping
-                        up with your work out regimen, allowing you to focus on
-                        being the best version of yourself. With features like a
-                        color-coded nutrition goal system, acheivement badges,
-                        and the ablity to share your achievements with your
-                        daily logs, this app is truly a all-in-one solution for
-                        those who are serius about getting (and staying)
-                        healthy.
+                        Solixfit removes all the complexity of keeping track of
+                        your eating habits and workout regimen, allowing you to
+                        focus on being the best version of yourself. With
+                        features like a color-coded nutrition goal system,
+                        acheivement badges, and the ablity to share your
+                        achievements with your daily logs, this app is truly a
+                        all-in-one solution for those who are serius about
+                        getting (and staying) healthy.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="carousel-item px-2">
-                <div className="card my-3">
+                <div className="card rounded-0 my-4">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
                       <a

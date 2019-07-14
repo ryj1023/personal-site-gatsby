@@ -19,3 +19,13 @@ button {
 .react-tooltip-clickable-link {
   pointer-events: auto;
 }
+
+@media screen and (max-width: 576px) {
+  .slick-prev {
+    left: -14px;
+  }
+
+  .slick-next {
+    right: -14px;
+  }
+}
