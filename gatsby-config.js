@@ -33,8 +33,15 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token: "21224966.beaabc2.88ba07aba0a04dc3874c76a2a5ce25dd",
+      },
+    },
     `gatsby-plugin-sass`,
     "gatsby-plugin-netlify",
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

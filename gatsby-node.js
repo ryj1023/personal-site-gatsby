@@ -16,3 +16,14 @@ exports.onCreatePage = ({ page, actions }) => {
     resolve()
   })
 }
+
+exports.createPages = () => {
+  return new Promise((resolve, reject) => {
+    // do async work
+  })
+}
+
+exports.createPages = (_, pluginOptions, cb) => {
+  // do Async work
+  cb()
+}
