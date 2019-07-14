@@ -160,11 +160,14 @@ const IndexPage = props => {
           </div>
         </div>
       </div>
-      <div className={`py-2 text-center w-100 ${styles.personalProjects}`}>
+      <div
+        id="portfolio"
+        className={`py-2 text-center w-100 ${styles.personalProjects}`}
+      >
         <h1 className="text-white mb-0">Personal Projects</h1>
       </div>
       <section className="container bg-white">
-        <div className={`anchor row ${styles.featuredWork}`} id="portfolio">
+        <div className={`anchor row ${styles.featuredWork}`}>
           <div className="col-12">
             <Slider {...projectSlickSettings}>
               <div className="carousel-item px-2">
