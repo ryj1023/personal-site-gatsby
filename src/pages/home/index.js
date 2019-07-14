@@ -267,7 +267,7 @@ const IndexPage = props => {
       </section>
       <section className="anchor about-content container pt-3 mb-4 bg-white">
         <div className="row">
-          <div className="col">
+          <div className="col mx-3">
             <h2 className="mb-0">Languages and Frameworks</h2>
             <p>
               The bulk of my experience in web development is focused on
