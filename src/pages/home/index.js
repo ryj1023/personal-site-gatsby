@@ -162,15 +162,15 @@ const IndexPage = props => {
           </div>
         </div>
       </div>
-      <section className="container-fluid mt-4 bg-white">
+      <div className={`py-2 text-center w-100 ${styles.personalProjects}`}>
+        <h1 className="text-white mb-0">Personal Projects</h1>
+      </div>
+      <section className="container bg-white">
         <div className={`anchor row ${styles.featuredWork}`} id="portfolio">
-          <div className={`py-2 text-center w-100 ${styles.personalProjects}`}>
-            <h1 className="text-white mb-0">Personal Projects</h1>
-          </div>
           <div className="col-12">
             <Slider {...projectSlickSettings}>
-              <div className="carousel-item px-2">
-                <div className="card my-3">
+              <div className="carousel-item">
+                <div className="card rounded-0 m-3">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
                       <a
