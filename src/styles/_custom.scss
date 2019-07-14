@@ -1,9 +1,8 @@
 @import "./_variables.scss";
-h1,
-h2,
-.home,
-button {
-  font-family: "Anton", sans-serif;
+
+@font-face {
+  font-family: "Anton";
+  src: url("../fonts/Anton-Regular.ttf");
 }
 
 .home {

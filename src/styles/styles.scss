@@ -2,6 +2,12 @@
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
+h1,
+h2,
+.home,
+button {
+  font-family: "Anton", sans-serif;
+}
 .slick-prev {
   padding-left: 10px;
 }
