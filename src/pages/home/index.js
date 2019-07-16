@@ -44,7 +44,20 @@ const IndexPage = props => {
       <SEO title="Home Page" />
       <section>
         <div className={`text-center ${styles.hero} position-relative`}>
-          <h1 className="text-white">Front End Web Developer</h1>
+          <div className={`text-white ${styles.heroTextWrapper} d-flex`}>
+            <h1 className={`${styles.fadeInOne} ${styles.heroText} mr-2`}>
+              Front
+            </h1>
+            <h1 className={`${styles.fadeInTwo} ${styles.heroText} mr-2`}>
+              End
+            </h1>
+            <h1 className={`${styles.fadeInThree} ${styles.heroText} mr-2`}>
+              Web
+            </h1>
+            <h1 className={`${styles.fadeInFour} ${styles.heroText}`}>
+              Developer
+            </h1>
+          </div>
         </div>
       </section>
       <div
