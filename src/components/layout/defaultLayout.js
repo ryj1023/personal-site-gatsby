@@ -4,10 +4,10 @@ import Footer from "../footer"
 import Header from "../header"
 import "../../styles/styles.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, images }) => {
   return (
     <>
-      <Header />
+      <Header images={images} />
       <main>{children}</main>
       <Footer />
     </>

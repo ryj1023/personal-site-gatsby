@@ -40,7 +40,7 @@ const IndexPage = props => {
   const images = get(props, "data.allImageSharp.nodes") || []
   const resumeURL = getResumePDF(props)
   return (
-    <Layout>
+    <Layout images={images}>
       <SEO title="Home Page" />
       <section>
         <div className={`text-center ${styles.hero} position-relative`}>

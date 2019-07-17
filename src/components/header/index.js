@@ -2,8 +2,9 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from "./styles.module.scss"
 import Scrollspy from "react-scrollspy"
+import Image from "../image.js"
 
-const Header = () => (
+const Header = ({ images }) => (
   <section className={`${styles.header} position-sticky`}>
     <nav className={`${styles.navBar} w-100 p-0`}>
       <Scrollspy
@@ -13,8 +14,12 @@ const Header = () => (
         offset={500}
       >
         <li className="text-center">
-          <a className="nav-link home w-100 py-lg-2 px-4" href="#home">
-            <span>RJ</span>
+          <a className="nav-link home w-100 py-1 px-4" href="#home">
+            <Image
+              className={`${styles.logo}`}
+              allImages={images}
+              imageName="logo-icon.png"
+            />
           </a>
         </li>
         <li className="text-center">
