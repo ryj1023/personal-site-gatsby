@@ -13,8 +13,8 @@ const Header = () => (
         offset={500}
       >
         <li className="text-center">
-          <a className="nav-link home w-100 p-lg-2" href="#home">
-            <span>Ryan Johnson</span>
+          <a className="nav-link home w-100 py-lg-2 px-4" href="#home">
+            <span>RJ</span>
           </a>
         </li>
         <li className="text-center">

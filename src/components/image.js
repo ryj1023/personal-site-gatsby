@@ -26,12 +26,7 @@ const Image = ({ allImages = false, imageName, className }) => {
     }
   `)
 
-  return (
-    <>
-      {allImages && getImage()}
-      {<img src="" alt="" />}
-    </>
-  )
+  return <>{allImages && getImage()}</>
 }
 
 export default Image
