@@ -326,18 +326,9 @@ const IndexPage = props => {
             >
               <Image allImages={images} imageName="linkedin-logo.png" />
             </a>
-            <a
-              id="google"
-              href="https://plus.google.com/108704185538516740383"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Image allImages={images} imageName="Google-1.png" />
-            </a>
           </div>
         </div>
         <Slider {...quoteSlickSettings}>
-          {/* <div style={{ height: "200px" }}> */}
           <blockquote
             className={`${styles.quoteCarousel} carousel-item text-center`}
           >
@@ -396,7 +387,6 @@ const IndexPage = props => {
               <span className={`${styles.quoteAuthor}`}>- Steve Jobs</span>
             </cite>
           </blockquote>
-          {/* </div> */}
         </Slider>
       </section>
     </Layout>
