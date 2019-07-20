@@ -47,13 +47,14 @@
 
 .buttonDownload {
   border-radius: 2rem;
-  border-color: #222222 !important;
-  color: black;
-  border: 1px solid black;
+  height: 40px;
+  background: #222222 !important;
+  color: white;
+  border: 1px solid white;
 }
 
 .buttonDownload:hover {
-  background: #222222 !important;
+  background: $primary !important;
   color: white !important;
 }
 
@@ -95,6 +96,14 @@ body,
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
   animation-duration: 1s;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+}
+.socialIcon:hover {
+  fill: $primary;
 }
 @keyframes fadeIn {
   from {

@@ -325,7 +325,7 @@ const IndexPage = props => {
             <a
               href={resumeURL}
               download="Ryan Johnson's Resume"
-              className={`font-weight-bold ${styles.buttonDownload} text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
+              className={`font-weight-bold ${styles.buttonDownload} align-items-center text-decoration-none bg-white p-2 d-flex justify-content-center mr-1`}
             >
               Resume
             </a>
@@ -333,15 +333,76 @@ const IndexPage = props => {
               href="https://github.com/ryj1023"
               target="_blank"
               rel="noopener noreferrer"
+              className="mr-1"
             >
-              <Image allImages={images} imageName="github-sociocon.png" />
+              <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="256.000000pt"
+                height="256.000000pt"
+                viewBox="0 0 256.000000 256.000000"
+                preserveAspectRatio="xMidYMid meet"
+                className={`${styles.socialIcon}`}
+              >
+                <g
+                  transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
+                  // fill="#000000"
+                  stroke="none"
+                >
+                  <path
+                    d="M1040 2420 c-433 -92 -772 -413 -888 -837 -24 -91 -26 -113 -26 -298
+0 -185 2 -207 26 -298 72 -265 250 -514 470 -660 212 -140 403 -197 658 -197
+255 0 446 57 658 197 220 146 398 395 470 660 24 91 26 113 26 298 0 185 -2
+207 -26 298 -54 196 -161 380 -305 523 -164 163 -376 275 -603 318 -115 22
+-349 20 -460 -4z m-106 -445 c27 -8 69 -29 95 -45 30 -20 53 -29 66 -25 87 26
+202 29 341 9 33 -5 48 -1 79 20 40 27 123 56 161 56 18 0 24 -9 34 -51 7 -29
+10 -74 6 -104 -5 -48 -3 -57 19 -83 94 -112 100 -324 12 -471 -18 -29 -48 -64
+-68 -78 -43 -28 -150 -63 -196 -63 -39 0 -40 -2 -10 -41 20 -28 22 -45 27
+-193 l5 -163 33 -27 c39 -34 34 -46 -20 -46 -32 0 -47 7 -74 34 l-34 34 -1
+119 c-1 156 -14 188 -22 53 -6 -120 1 -182 28 -228 27 -45 10 -60 -39 -37 -41
+20 -54 38 -78 110 -13 40 -16 44 -17 23 -2 -43 -30 -105 -56 -122 -14 -9 -38
+-16 -56 -16 l-31 0 21 36 c19 31 21 50 20 172 0 75 -3 132 -5 126 -2 -5 -8
+-66 -12 -134 l-7 -124 -34 -23 c-35 -24 -111 -32 -111 -13 0 6 11 21 26 33 28
+24 43 77 44 150 l0 47 -52 0 c-117 1 -155 23 -204 116 -16 31 -46 69 -66 86
+-43 33 -48 53 -17 61 35 9 64 -8 124 -77 64 -72 87 -82 165 -71 43 6 50 10 59
+38 6 17 19 39 27 49 19 20 14 23 -51 31 -63 8 -148 44 -193 83 -52 44 -97 137
+-114 232 -16 96 -1 185 42 256 31 48 32 54 25 119 -7 74 6 130 33 147 22 12
+19 12 76 -5z"
+                  />
+                </g>
+              </svg>
             </a>
             <a
               href="https://www.linkedin.com/in/ryan-johnson-495537119?trk=nav_responsive_tab_profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image allImages={images} imageName="linkedin-logo.png" />
+              <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="224.000000pt"
+                height="224.000000pt"
+                viewBox="0 0 224.000000 224.000000"
+                preserveAspectRatio="xMidYMid meet"
+                className={`${styles.socialIcon}`}
+              >
+                <g
+                  transform="translate(0.000000,224.000000) scale(0.100000,-0.100000)"
+                  stroke="none"
+                >
+                  <path
+                    d="M975 2230 c-159 -22 -332 -87 -466 -172 -340 -217 -544 -643 -501
+-1045 56 -538 464 -946 1002 -1004 462 -50 921 210 1120 634 341 727 -170
+1566 -970 1592 -69 2 -152 0 -185 -5z m-281 -401 c69 -47 97 -149 61 -218 -36
+-70 -126 -113 -195 -92 -81 24 -130 87 -130 167 0 137 153 220 264 143z m971
+-448 c67 -29 108 -71 139 -140 39 -87 46 -163 46 -493 l0 -308 -149 0 -150 0
+-3 303 c-3 282 -4 304 -23 337 -30 51 -77 72 -144 66 -62 -6 -96 -27 -126 -77
+-19 -32 -20 -55 -23 -331 l-3 -298 -150 0 -149 0 0 475 0 475 145 0 145 0 0
+-57 0 -57 43 41 c77 75 130 93 257 90 73 -2 107 -8 145 -26z m-915 -466 l0
+-475 -150 0 -150 0 0 475 0 475 150 0 150 0 0 -475z"
+                  />
+                </g>
+              </svg>
             </a>
           </div>
         </div>
