@@ -7,12 +7,18 @@ import Image from "../../components/image"
 import SEO from "../../components/seo"
 import Slider from "react-slick"
 
-var projectSlickSettings = {
-  dots: false,
-  infinite: true,
-  speed: 800,
-  slidesToShow: 1,
-  slidesToScroll: 1,
+const SlickArrow = props => {
+  const { style, onClick, imageName, images } = props
+
+  return (
+    <div
+      className="slick-arrow"
+      style={{ ...style, display: "block", cursor: "pointer" }}
+      onClick={onClick}
+    >
+      <Image allImages={images} imageName={imageName} />
+    </div>
+  )
 }
 
 var quoteSlickSettings = {
@@ -22,6 +28,7 @@ var quoteSlickSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
+  fade: true,
   autoplaySpeed: 10000,
   arrows: false,
 }
@@ -39,6 +46,16 @@ const IndexPage = props => {
   }, [])
   const images = get(props, "data.allImageSharp.nodes") || []
   const resumeURL = getResumePDF(props)
+  var projectSlickSettings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    nextArrow: <SlickArrow images={images} imageName="next.png" />,
+    prevArrow: <SlickArrow images={images} imageName="prev.png" />,
+  }
   return (
     <Layout images={images}>
       <SEO title="Home Page" />
@@ -106,7 +123,7 @@ const IndexPage = props => {
                 people, and have learned a great deal about what separates the
                 good developers from the bad ones. Through the years I've
                 developed a philosophy I live by when it comes to writing clean
-                and consise code:
+                and consise code.
               </p>
             </section>
             <div className="m-auto d-flex justify-content-center m-3">
@@ -118,11 +135,11 @@ const IndexPage = props => {
                   <div className={`${styles.bulletListText}`}>
                     <strong>Scalability.</strong>{" "}
                     <span>
-                      Always layout the foundation of what you are building with
+                      I Alway lay out the foundation of what I am building with
                       potential expansion in mind. Even simple projects tend to
-                      evolve quickly and become more complex over time. Making
-                      sure to not code yourself into a corner saves a lot of
-                      time in the long run.
+                      evolve quickly and become more complex. Making sure to not
+                      code myself into a corner saves a lot of time in the long
+                      run.
                     </span>
                   </div>
                 </div>
@@ -134,9 +151,9 @@ const IndexPage = props => {
                     <strong>Performance.</strong>{" "}
                     <span>
                       Optimizing for speed makes a significant difference in the
-                      amount of traffic to your project. Slower loading times
-                      can cost a company a fortune, so doing things like
-                      minification and reducing page renders are something to
+                      amount of traffic to my project. Slower loading times can
+                      cost a company a fortune, so doing things like
+                      minification and reducing page renders are something I
                       always strive for.{" "}
                     </span>
                   </div>
@@ -150,7 +167,7 @@ const IndexPage = props => {
                     <span>
                       It's hard to account for every use-case, but adequate
                       testing helps to diagnose issues and minimize bugs, saving
-                      you tons of time in the future. Adopting a test-driven
+                      me tons of time in the future. Adopting a test-driven
                       development approach with unit, integration, and
                       automation tests is important—especially for larger
                       projects.{" "}
@@ -164,12 +181,12 @@ const IndexPage = props => {
                   <div className={`${styles.bulletListText}`}>
                     <strong>Clean Code.</strong>{" "}
                     <span>
-                      Although it's great to be able to show off your skills to
-                      make performance boosts to your code, if the readability
-                      expense is greater than the performance issue your code is
-                      meant to resolve, try to second guess your approach in
-                      favor of clean and clear code you or other developers can
-                      come back to and understand in the future.
+                      Although it's great to be able to show off my skills to
+                      make performance boosts to my code, if the readability
+                      expense is greater than the performance issue my code is
+                      meant to resolve, I try to second guess my approach in
+                      favor of clean and clear code that myself or other
+                      developers can come back to and understand in the future.
                     </span>
                   </div>
                 </div>
@@ -186,7 +203,7 @@ const IndexPage = props => {
       </div>
       <section className="container bg-white">
         <div className={`anchor row ${styles.featuredWork}`}>
-          <div className="col-12">
+          <div className="col-12 px-0">
             <Slider {...projectSlickSettings}>
               <div className="carousel-item px-2">
                 <div className="card rounded-0 my-4">

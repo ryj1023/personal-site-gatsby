@@ -5,6 +5,9 @@
   src: url("../fonts/Anton-Regular.ttf");
 }
 
+.nav-link:hover svg {
+  fill: #ff7878;
+}
 .home {
   font-size: 20px;
 }
@@ -34,4 +37,19 @@ a:hover {
 .carousel-control-next,
 .carousel-control-prev {
   width: 10% !important;
+}
+
+.slick-initialized.slick-slide {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-slider {
+  display: flex;
+  align-items: center;
 }
