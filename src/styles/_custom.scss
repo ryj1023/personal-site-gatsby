@@ -39,10 +39,17 @@ a:hover {
   width: 10% !important;
 }
 
-.slick-initialized.slick-slide {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
+.slick-slide {
+  min-height: 200px;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // display: inline-block;
+  // vertical-align: middle;
+  // float: none;
 }
 .slick-prev:before,
 .slick-next:before {
@@ -52,4 +59,32 @@ a:hover {
 .slick-slider {
   display: flex;
   align-items: center;
+}
+
+h1,
+h2,
+.home,
+button {
+  font-family: "Anton", sans-serif;
+}
+.slick-prev {
+  left: -18px;
+}
+
+.slick-next {
+  right: -18px;
+}
+
+.react-tooltip-clickable-link {
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .slick-prev {
+    left: -14px;
+  }
+
+  .slick-next {
+    right: -14px;
+  }
 }

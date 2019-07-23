@@ -411,6 +411,16 @@ const IndexPage = props => {
             className={`${styles.quoteCarousel} carousel-item text-center`}
           >
             <p className="d-block w-100 m-auto">
+              “Have no fear of perfection—you’ll never reach it.”
+            </p>
+            <cite className="m-auto">
+              <span className={`${styles.quoteAuthor}`}>–Salvador Dali</span>
+            </cite>
+          </blockquote>
+          <blockquote
+            className={`${styles.quoteCarousel} carousel-item text-center`}
+          >
+            <p className="d-block w-100 m-auto">
               “We forget: In life, it doesn’t matter what happens to you or
               where you came from. It matters what you do with what happens and
               what you’ve been given.”
@@ -419,16 +429,7 @@ const IndexPage = props => {
               <span className={`${styles.quoteAuthor}`}>- Ryan Holliday</span>
             </cite>
           </blockquote>
-          <blockquote
-            className={`${styles.quoteCarousel} carousel-item text-center`}
-          >
-            <p className="d-block w-100 m-auto">
-              “Have no fear of perfection—you’ll never reach it.”
-            </p>
-            <cite className="m-auto">
-              <span className={`${styles.quoteAuthor}`}>–Salvador Dali</span>
-            </cite>
-          </blockquote>
+
           <blockquote
             className={`${styles.quoteCarousel} carousel-item text-center`}
           >

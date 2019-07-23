@@ -10,10 +10,10 @@ const Header = ({ images }) => (
         items={["home", "about", "portfolio"]}
         currentClassName={styles.activeLink}
         className="d-flex align-items-center mb-0 h-100 list-unstyled"
-        offset={500}
+        offset={0}
       >
-        <li className="text-center">
-          <a className="nav-link home w-100 py-1 px-4" href="#home">
+        <li className="text-center h-100">
+          <a className="nav-link home w-100 h-100 px-4" href="#home">
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"

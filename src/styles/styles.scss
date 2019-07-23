@@ -1,31 +1,3 @@
 @import "./_custom.scss";
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
-
-h1,
-h2,
-.home,
-button {
-  font-family: "Anton", sans-serif;
-}
-.slick-prev {
-  left: -18px;
-}
-
-.slick-next {
-  right: -18px;
-}
-
-.react-tooltip-clickable-link {
-  pointer-events: auto;
-}
-
-@media screen and (max-width: 576px) {
-  .slick-prev {
-    left: -14px;
-  }
-
-  .slick-next {
-    right: -14px;
-  }
-}

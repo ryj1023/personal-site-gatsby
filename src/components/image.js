@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 const Image = ({ allImages = false, imageName, className }) => {
   const getImage = () => {
@@ -10,22 +9,6 @@ const Image = ({ allImages = false, imageName, className }) => {
     ).fluid.src
     return <img className={className} src={imageSrc} alt="" />
   }
-
-  useStaticQuery(graphql`
-    query {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        edges {
-          node {
-            extension
-            dir
-            modifiedTime
-            publicURL
-          }
-        }
-      }
-    }
-  `)
-
   return <>{allImages && getImage()}</>
 }
 
