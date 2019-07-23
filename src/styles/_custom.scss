@@ -61,6 +61,13 @@ a:hover {
   align-items: center;
 }
 
+.slick-slide {
+  visibility: hidden;
+}
+.slick-slide.slick-active {
+  visibility: visible;
+}
+
 h1,
 h2,
 .home,
