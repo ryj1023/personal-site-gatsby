@@ -52,7 +52,7 @@ const IndexPage = props => {
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-
+    fade: true,
     nextArrow: <SlickArrow images={images} imageName="next.png" />,
     prevArrow: <SlickArrow images={images} imageName="prev.png" />,
   }
