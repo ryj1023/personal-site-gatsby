@@ -52,8 +52,9 @@ $(document).ready(() => {
 
         if (match) {
           rect = match.getBoundingClientRect()
-          anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset()
-          console.log("anchorOffset", anchorOffset)
+          // 88 pixels is used as an offset to show the label of the section by subtacting it's height
+          anchorOffset =
+            window.pageYOffset + rect.top - this.getFixedOffset() - 88
           $("html, body").animate({ scrollTop: anchorOffset }, 500)
           // window.scrollTo(window.pageXOffset, anchorOffset);
           // Add the state to history as-per normal anchor links

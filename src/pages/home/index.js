@@ -52,14 +52,14 @@ const IndexPage = props => {
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
+
     nextArrow: <SlickArrow images={images} imageName="next.png" />,
     prevArrow: <SlickArrow images={images} imageName="prev.png" />,
   }
   return (
     <Layout images={images}>
       <SEO title="Home Page" />
-      <section>
+      <section id="home">
         <div className={`text-center ${styles.hero} position-relative`}>
           <div className={`text-white ${styles.heroTextWrapper}`}>
             <h1 className={`${styles.fadeInHeader} ${styles.heroText}`}>
@@ -82,13 +82,10 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-      <div
-        id="about"
-        className={`py-2 text-center w-100 ${styles.personalProjects}`}
-      >
+      <div className={`py-2 text-center w-100 ${styles.personalProjects}`}>
         <h1 className="text-white mb-0">About Me</h1>
       </div>
-      <div className="container my-4 bg-white">
+      <div id="about" className="container my-4 bg-white">
         <div className="row">
           <div className="col">
             <section className="anchor about-content m-3">
@@ -195,18 +192,15 @@ const IndexPage = props => {
           </div>
         </div>
       </div>
-      <div
-        id="portfolio"
-        className={`py-2 text-center w-100 ${styles.personalProjects}`}
-      >
+      <div className={`py-2 text-center w-100 ${styles.personalProjects}`}>
         <h1 className="text-white mb-0">Personal Projects</h1>
       </div>
-      <section className="container bg-white">
+      <section id="portfolio" className="container bg-white my-4">
         <div className={`anchor row ${styles.featuredWork}`}>
           <div className="col-12 px-0">
             <Slider {...projectSlickSettings}>
               <div className="carousel-item px-2">
-                <div className="card rounded-0 my-4">
+                <div className="card rounded-0">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
                       <a

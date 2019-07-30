@@ -11,9 +11,13 @@
   z-index: 1;
 }
 
-.activeLink {
-  border-bottom: 4px solid #ff7878;
-  margin-bottom: -4px;
+.activeLink:after {
+  content: "";
+  border: 2px solid #ff7878;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
 }
 
 .logo {

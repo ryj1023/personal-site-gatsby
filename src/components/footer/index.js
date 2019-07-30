@@ -8,7 +8,13 @@ const Footer = () => {
       className={`p-2 d-flex justify-content-between anchor ${styles.contentFooter} text-center align-items-center`}
       id="contact"
     >
-      <ReactTooltip id="credits" className="react-tooltip-clickable-link">
+      <ReactTooltip
+        globalEventOff="click"
+        place="right"
+        id="credits"
+        className="react-tooltip-clickable-link"
+        event="click"
+      >
         <p className="text-white mb-0">
           Icons by{" "}
           <a
@@ -32,18 +38,13 @@ const Footer = () => {
           </a>
         </p>
       </ReactTooltip>
-      <button
-        data-tip
-        data-for="credits"
-        className="text-white btn btn-link"
-        data-event="click focus"
-      >
+      <button data-tip data-for="credits" className="text-white btn btn-link">
         credits
       </button>
       {/* eslint-disable-next-line */}
       <a href="#" className="text-white btn btn-link">
         <span dangerouslySetInnerHTML={{ __html: "&#169" }} />
-        <span className="ml-1">Ryan Johnson, 2019</span>
+        <span className="ml-1 font-weight-bold">Ryan Johnson, 2019</span>
       </a>
     </footer>
   )

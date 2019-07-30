@@ -10,9 +10,9 @@ const Header = ({ images }) => (
         items={["home", "about", "portfolio"]}
         currentClassName={styles.activeLink}
         className="d-flex align-items-center mb-0 h-100 list-unstyled"
-        offset={0}
+        offset={-48}
       >
-        <li className="text-center h-100">
+        <li className="text-center h-100 position-relative">
           <a className="nav-link home w-100 h-100 px-4" href="#home">
             <svg
               version="1.0"
@@ -46,14 +46,17 @@ const Header = ({ images }) => (
             </svg>
           </a>
         </li>
-        <li className="text-center">
-          <a className="nav-link w-100 font-weight-bold p-lg-2" href="#about">
+        <li className="text-center h-100 position-relative">
+          <a
+            className="nav-link w-100 d-flex align-items-center h-100 font-weight-bold"
+            href="#about"
+          >
             About <span className="sr-only">(current)</span>
           </a>
         </li>
-        <li className="text-center">
+        <li className="text-center h-100 position-relative">
           <a
-            className="nav-link w-100 font-weight-bold p-lg-2"
+            className="nav-link w-100 h-100 d-flex align-items-center font-weight-bold "
             href="#portfolio"
           >
             Portfolio <span className="sr-only">(current)</span>
