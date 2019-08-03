@@ -3,12 +3,17 @@ import { graphql } from "gatsby"
 import get from "lodash.get"
 import styles from "./styles.module.scss"
 import Layout from "../../components/layout/defaultLayout"
-import Image from "../../components/image"
 import SEO from "../../components/seo"
 import Slider from "react-slick"
+import Next from "../../images/next.png"
+import Prev from "../../images/prev.png"
+import BulletBlack from "../../images/bullet_black.png"
+import DiscoverNewMusic from "../../images/Discover-New-Music.png"
+import FitnessAssessment from "../../images/Fitness-Assessment-Screenshot.png"
+import SolixFit from "../../images/solixfit.png"
 
 const SlickArrow = props => {
-  const { style, onClick, imageName, images } = props
+  const { style, onClick, imageName } = props
 
   return (
     <div
@@ -16,7 +21,7 @@ const SlickArrow = props => {
       style={{ ...style, display: "block", cursor: "pointer" }}
       onClick={onClick}
     >
-      <Image allImages={images} imageName={imageName} />
+      <img src={imageName} />
     </div>
   )
 }
@@ -53,8 +58,8 @@ const IndexPage = props => {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    nextArrow: <SlickArrow images={images} imageName="next.png" />,
-    prevArrow: <SlickArrow images={images} imageName="prev.png" />,
+    nextArrow: <SlickArrow images={images} imageName={Next} />,
+    prevArrow: <SlickArrow images={images} imageName={Prev} />,
   }
   return (
     <Layout images={images}>
@@ -127,7 +132,7 @@ const IndexPage = props => {
               <div className={`${styles.bulletPointList} p-2 m-3`}>
                 <div className="d-flex">
                   <div>
-                    <Image allImages={images} imageName="bullet_black.png" />
+                    <img alt="bullet" src={BulletBlack} />
                   </div>
                   <div className={`${styles.bulletListText}`}>
                     <strong>Scalability.</strong>{" "}
@@ -142,7 +147,7 @@ const IndexPage = props => {
                 </div>
                 <div className="d-flex">
                   <div>
-                    <Image allImages={images} imageName="bullet_black.png" />
+                    <img alt="bullet" src={BulletBlack} />
                   </div>
                   <div className={`${styles.bulletListText}`}>
                     <strong>Performance.</strong>{" "}
@@ -157,7 +162,7 @@ const IndexPage = props => {
                 </div>
                 <div className="d-flex">
                   <div>
-                    <Image allImages={images} imageName="bullet_black.png" />
+                    <img alt="bullet" src={BulletBlack} />
                   </div>
                   <div className={`${styles.bulletListText}`}>
                     <strong>Testing.</strong>{" "}
@@ -173,7 +178,7 @@ const IndexPage = props => {
                 </div>
                 <div className="d-flex">
                   <div>
-                    <Image allImages={images} imageName="bullet_black.png" />
+                    <img alt="bullet" src={BulletBlack} />
                   </div>
                   <div className={`${styles.bulletListText}`}>
                     <strong>Clean Code.</strong>{" "}
@@ -208,10 +213,10 @@ const IndexPage = props => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
+                        <img
                           className={styles.projectImage}
-                          allImages={images}
-                          imageName="Discover-New-Music.png"
+                          alt="discover-new-music"
+                          src={DiscoverNewMusic}
                         />
                       </a>
                     </div>
@@ -237,10 +242,10 @@ const IndexPage = props => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
-                          allImages={images}
+                        <img
                           className={styles.projectImage}
-                          imageName="solixfit.png"
+                          src={SolixFit}
+                          alt="solixfit"
                         />
                       </a>
                     </div>
@@ -268,10 +273,10 @@ const IndexPage = props => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Image
-                          allImages={images}
-                          imageName="Fitness-Assessment-Screenshot.png"
+                        <img
                           className={styles.projectImage}
+                          alt="fitness-assessment"
+                          src={FitnessAssessment}
                         />
                       </a>
                     </div>
