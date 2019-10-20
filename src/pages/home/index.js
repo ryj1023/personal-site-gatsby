@@ -137,7 +137,7 @@ const IndexPage = props => {
                   <div className={`${styles.bulletListText}`}>
                     <strong>Scalability.</strong>{" "}
                     <span>
-                      I Always lay out the foundation of what I am building with
+                      I always lay out the foundation of what I am building with
                       potential expansion in mind. Even simple projects tend to
                       evolve quickly and become more complex. Making sure to not
                       code myself into a corner saves a lot of time in the long
