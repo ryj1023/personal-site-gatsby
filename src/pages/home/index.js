@@ -21,7 +21,7 @@ const SlickArrow = props => {
       style={{ ...style, display: "block", cursor: "pointer" }}
       onClick={onClick}
     >
-      <img src={imageName} />
+      <img alt="slick arrow" src={imageName} />
     </div>
   )
 }
