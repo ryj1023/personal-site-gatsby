@@ -38,14 +38,14 @@ const Footer = () => {
           </a>
         </p>
       </ReactTooltip>
-      <button data-tip data-for="credits" className="text-white btn btn-link">
+      {/* <button data-tip data-for="credits" className="text-white btn btn-link">
         credits
-      </button>
+      </button> */}
       {/* eslint-disable-next-line */}
-      {/* <a href="#" className="text-white btn btn-link">
+      <a href="#" className="text-white btn btn-link">
         <span dangerouslySetInnerHTML={{ __html: "&#169" }} />
         <span className="ml-1 font-weight-bold">Ryan Johnson, 2019</span>
-      </a> */}
+      </a>
     </footer>
   )
 }
