@@ -41,10 +41,10 @@ const Footer = () => {
         credits
       </button>
       {/* eslint-disable-next-line */}
-      <a href="#" className="home text-white btn btn-link">
+      {/* <a href="#" className="home text-white btn btn-link">
         <span dangerouslySetInnerHTML={{ __html: "&#169" }} />
         <span className="ml-1">Ryan Johnson, 2019</span>
-      </a>
+      </a> */}
     </footer>
   )
 }
