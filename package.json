@@ -50,7 +50,6 @@
     "start": "yarn clean && yarn build && yarn serve",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "postinstall": "gatsby build"
   },
   "repository": {
     "type": "git",
