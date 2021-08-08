@@ -18,8 +18,8 @@ const Header = ({ images }) => (
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
               className={`${styles.logo}`}
-              width="165.000000pt"
-              height="167.000000pt"
+              width="35"
+              height="35"
               viewBox="0 0 165.000000 167.000000"
               preserveAspectRatio="xMidYMid meet"
             >

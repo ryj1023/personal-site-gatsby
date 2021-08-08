@@ -7,7 +7,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Anton`],
+        display: "block",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
+
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
