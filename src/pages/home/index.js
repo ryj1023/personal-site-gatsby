@@ -125,7 +125,7 @@ const IndexPage = props => {
                 people, and have learned a great deal about what separates the
                 good developers from the bad ones. Through the years I've
                 developed a philosophy I live by when it comes to writing clean
-                and consise code.
+                and concise code.
               </p>
             </section>
             <div className="m-auto d-flex justify-content-center m-3">
