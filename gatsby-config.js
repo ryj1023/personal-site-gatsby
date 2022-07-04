@@ -40,6 +40,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/index`,
         display: `minimal-ui`,
+        icon: `src/images/logo-icon.png`,
       },
     },
     `gatsby-plugin-sass`,

@@ -8,7 +8,7 @@ import Slider from "react-slick"
 import Next from "../../images/next.png"
 import Prev from "../../images/prev.png"
 import BulletBlack from "../../images/bullet_black.png"
-import DiscoverNewMusic from "../../images/Discover-New-Music.png"
+// import DiscoverNewMusic from "../../images/Discover-New-Music.png"
 import FitnessAssessment from "../../images/Fitness-Assessment-Screenshot.png"
 import SolixFit from "../../images/solixfit.png"
 
@@ -99,8 +99,19 @@ const IndexPage = props => {
                 I have been creating enterprise-level software, specializing in
                 web and mobile app development, since 2016. My focus is creating
                 scalable and sophisticated software solutions for the
-                ever-evolving web development industry. I spent the last two
-                years as a front end developer at{" "}
+                ever-evolving Web Development industry. I spent the last year as
+                a Software Consultant at{" "}
+                <a
+                  target="_blank"
+                  href="https://resultstack.com"
+                  rel="noopener noreferrer"
+                >
+                  ResultStack
+                </a>
+                .
+              </p>
+              <p>
+                Before consulting, I spent two years as a front end developer at{" "}
                 <a href="http://beachhousesinparadise.com/">
                   Beach Houses in Paradise
                 </a>
@@ -204,7 +215,7 @@ const IndexPage = props => {
         <div className={`anchor row ${styles.featuredWork}`}>
           <div className="col-12 px-0">
             <Slider {...projectSlickSettings}>
-              <div className="carousel-item px-2">
+              {/* <div className="carousel-item px-2">
                 <div className="card rounded-0">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
@@ -232,7 +243,7 @@ const IndexPage = props => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="carousel-item active px-2">
                 <div className="card rounded-0 my-4">
                   <div className="card-body row">
@@ -314,6 +325,8 @@ const IndexPage = props => {
               interaction. I have extensive experience with both REST API and
               GraphQL data-fetching practices. A few other languages and
               frameworks I've worked with are PHP, C, C++, Java, and Angular.
+              Over the past year I've spent siginificant time working on Mobile
+              Development using React-Native.
             </p>
           </div>
         </div>
