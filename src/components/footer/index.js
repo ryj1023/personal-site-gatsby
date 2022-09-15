@@ -3,6 +3,7 @@ import styles from "./styles.module.scss"
 import ReactTooltip from "react-tooltip"
 
 const Footer = () => {
+  // test
   return (
     <footer
       className={`p-2 d-flex justify-content-between anchor ${styles.contentFooter} text-center align-items-center`}
