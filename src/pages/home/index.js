@@ -41,6 +41,7 @@ var quoteSlickSettings = {
 const getResumePDF = props => {
   const pdfs = get(props, "data.pdfs.edges") || []
   const found = pdfs.find(pdf => pdf.node.name === "Resume") || {}
+  console.log("found", found)
   const url = get(found, "node.publicURL") || ""
   return url
 }
@@ -301,7 +302,7 @@ const IndexPage = props => {
           >
             <a
               href={resumeURL}
-              download="Ryan Johnson's Resume"
+              // download="Ryan Johnson's Resume"
               className={`font-weight-bold ${styles.buttonDownload} align-items-center text-decoration-none p-2 d-flex justify-content-center mr-1`}
             >
               Resume
