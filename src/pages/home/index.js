@@ -41,6 +41,7 @@ var quoteSlickSettings = {
 const getResumePDF = props => {
   const pdfs = get(props, "data.pdfs.edges") || []
   const found = pdfs.find(pdf => pdf.node.name === "Resume") || {}
+  console.log("found", found)
   const url = get(found, "node.publicURL") || ""
   return url
 }
