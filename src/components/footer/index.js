@@ -45,7 +45,7 @@ const Footer = () => {
       {/* eslint-disable-next-line */}
       <a href="#" className="text-white btn btn-link">
         <span dangerouslySetInnerHTML={{ __html: "&#169" }} />
-        <span className="ml-1 font-weight-bold">Ryan Johnson, 2021</span>
+        <span className="ml-1 font-weight-bold">Ryan Johnson, 2023</span>
       </a>
     </footer>
   )
