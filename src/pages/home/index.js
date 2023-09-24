@@ -9,7 +9,7 @@ import Next from "../../images/next.png"
 import Prev from "../../images/prev.png"
 import BulletBlack from "../../images/bullet_black.png"
 // import DiscoverNewMusic from "../../images/Discover-New-Music.png"
-import FitnessAssessment from "../../images/Fitness-Assessment-Screenshot.png"
+// import FitnessAssessment from "../../images/Fitness-Assessment-Screenshot.png"
 import SolixFit from "../../images/solixfit.png"
 
 const SlickArrow = props => {
@@ -72,16 +72,16 @@ const IndexPage = props => {
             </h1>
             <div className="d-flex">
               <h2 className={`${styles.fadeInOne} ${styles.heroText} mr-2`}>
-                Front
+                Adventures
               </h2>
               <h2 className={`${styles.fadeInTwo} ${styles.heroText} mr-2`}>
-                End
+                in
               </h2>
               <h2 className={`${styles.fadeInThree} ${styles.heroText} mr-2`}>
-                Web
+                Software
               </h2>
               <h2 className={`${styles.fadeInFour} ${styles.heroText}`}>
-                Developer
+                Development
               </h2>
             </div>
           </div>
@@ -94,49 +94,14 @@ const IndexPage = props => {
         <div className="row">
           <div className="col">
             <section className="anchor about-content m-3">
-              <h2 className="mb-0">My Story</h2>
+              <h2 className="mb-2">My Story</h2>
               <p>
-                I have been creating enterprise-level software, specializing in
-                web and mobile app development, since 2016. My focus is creating
+                I have been creating enterprise-level software since 2016, with
+                a focus on web and mobile app development. I have experience in
+                software consulting, full-stack development, and student
+                mentorship. My driving-force as a developer is to create
                 scalable and sophisticated software solutions for the
-                ever-evolving Web Development industry. I spent the last year as
-                a Software Consultant at{" "}
-                <a
-                  target="_blank"
-                  href="https://resultstack.com"
-                  rel="noopener noreferrer"
-                >
-                  ResultStack
-                </a>
-                .
-              </p>
-              <p>
-                Before consulting, I spent two years as a front end developer at{" "}
-                <a href="http://beachhousesinparadise.com/">
-                  Beach Houses in Paradise
-                </a>
-                , a vacation rental platform based out of Palm Beach Gardens,
-                Florida, specializing in ocean-to-river beach houses. In the
-                past I've worked as a freelance developer, customizing personal
-                websites and mobile applications in React-Native. About halfway
-                through my Computer Science degree I decided fast-track my
-                learning experience and enter the workforce early by joining{" "}
-                <a
-                  target="_blank"
-                  href="https://thinkful.com"
-                  rel="noopener noreferrer"
-                >
-                  Thinkful
-                </a>
-                , an immersive mentorship-based online Bootcamp focusing on the
-                most cutting-edge technologies in Web Development. After
-                graduating, I became a mentor myself, teaching students the
-                fundamentals of Web Development while sharpening my own
-                skillset. I have had the pleasure of working with amazing
-                people, and have learned a great deal about what separates the
-                good developers from the bad ones. Through the years I've
-                developed a philosophy I live by when it comes to writing clean
-                and concise code.
+                ever-evolving web and mobile development industry.
               </p>
             </section>
             <div className="m-auto d-flex justify-content-center m-3">
@@ -167,7 +132,7 @@ const IndexPage = props => {
                       amount of traffic to my project. Slower loading times can
                       cost a company a fortune, so doing things like
                       minification and reducing page renders are something I
-                      always strive for.{" "}
+                      always keep in mind.{" "}
                     </span>
                   </div>
                 </div>
@@ -275,7 +240,7 @@ const IndexPage = props => {
                   </div>
                 </div>
               </div>
-              <div className="carousel-item px-2">
+              {/* <div className="carousel-item px-2">
                 <div className="card rounded-0 my-4">
                   <div className="card-body row">
                     <div className="col-12 col-md-6">
@@ -305,7 +270,7 @@ const IndexPage = props => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </Slider>
           </div>
         </div>
