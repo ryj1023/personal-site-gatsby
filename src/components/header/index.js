@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 import React from "react"
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 import Scrollspy from "react-scrollspy"
 
-const Header = ({ images }) => (
+const Header = () => (
   <section className={`${styles.header} position-sticky`}>
     <nav className={`${styles.navBar} w-100 p-0`}>
       <Scrollspy
@@ -13,7 +13,10 @@ const Header = ({ images }) => (
         offset={-48}
       >
         <li className="text-center h-100 position-relative">
-          <a className="nav-link home w-100 h-100 px-4" href="#home">
+          <a
+            className="nav-link home w-100 h-100 px-4 d-flex align-items-center"
+            href="#home"
+          >
             <svg
               version="1.0"
               xmlns="http://www.w3.org/2000/svg"
@@ -48,18 +51,18 @@ const Header = ({ images }) => (
         </li>
         <li className="text-center h-100 position-relative">
           <a
-            className="nav-link w-100 d-flex align-items-center h-100 font-weight-bold"
+            className="nav-link w-100 d-flex align-items-center h-100 fw-bold p-3"
             href="#about"
           >
-            About <span className="sr-only">(current)</span>
+            About <span className="visually-hidden">(current)</span>
           </a>
         </li>
         <li className="text-center h-100 position-relative">
           <a
-            className="nav-link w-100 h-100 d-flex align-items-center font-weight-bold "
+            className="nav-link w-100 h-100 d-flex align-items-center fw-bold p-3"
             href="#portfolio"
           >
-            Portfolio <span className="sr-only">(current)</span>
+            Portfolio <span className="visually-hidden">(current)</span>
           </a>
         </li>
       </Scrollspy>
