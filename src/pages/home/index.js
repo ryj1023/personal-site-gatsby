@@ -1,30 +1,29 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import get from "lodash.get"
-import styles from "./styles.module.scss"
+import * as styles from "./styles.module.scss"
 import Layout from "../../components/layout/defaultLayout"
-import SEO from "../../components/seo"
 import Slider from "react-slick"
-import Next from "../../images/next.png"
-import Prev from "../../images/prev.png"
+// import Next from "../../images/next.png"
+// import Prev from "../../images/prev.png"
 import BulletBlack from "../../images/bullet_black.png"
 // import DiscoverNewMusic from "../../images/Discover-New-Music.png"
 // import FitnessAssessment from "../../images/Fitness-Assessment-Screenshot.png"
 import SolixFit from "../../images/solixfit.png"
 
-const SlickArrow = props => {
-  const { style, onClick, imageName } = props
+// const SlickArrow = props => {
+//   const { style, onClick, imageName } = props
 
-  return (
-    <div
-      className="slick-arrow"
-      style={{ ...style, display: "block", cursor: "pointer" }}
-      onClick={onClick}
-    >
-      <img alt="slick arrow" src={imageName} />
-    </div>
-  )
-}
+//   return (
+//     <div
+//       className="slick-arrow"
+//       style={{ ...style, display: "block", cursor: "pointer" }}
+//       onClick={onClick}
+//     >
+//       <img alt="slick arrow" src={imageName} />
+//     </div>
+//   )
+// }
 
 var quoteSlickSettings = {
   dots: false,
@@ -38,33 +37,32 @@ var quoteSlickSettings = {
   arrows: false,
 }
 
-const getResumePDF = props => {
+const getResumePDF = (props) => {
   const pdfs = get(props, "data.pdfs.edges") || []
-  const found = pdfs.find(pdf => pdf.node.name === "Resume") || {}
+  const found = pdfs.find((pdf) => pdf.node.name === "Resume") || {}
   console.log("found", found)
   const url = get(found, "node.publicURL") || ""
   return url
 }
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   useEffect(() => {
     require("../../util/scrollspy")
   }, [])
   const images = get(props, "data.allImageSharp.nodes") || []
   const resumeURL = getResumePDF(props)
-  var projectSlickSettings = {
-    dots: false,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    nextArrow: <SlickArrow images={images} imageName={Next} />,
-    prevArrow: <SlickArrow images={images} imageName={Prev} />,
-  }
+  // var projectSlickSettings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 800,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   fade: true,
+  //   nextArrow: <SlickArrow images={images} imageName={Next} />,
+  //   prevArrow: <SlickArrow images={images} imageName={Prev} />,
+  // }
   return (
     <Layout images={images}>
-      <SEO title="Home Page" />
       <section id="home">
         <div className={`text-center ${styles.hero} position-relative`}>
           <div className={`text-white ${styles.heroTextWrapper}`}>
@@ -72,13 +70,13 @@ const IndexPage = props => {
               Ryan Johnson
             </h1>
             <div className="d-flex">
-              <h2 className={`${styles.fadeInOne} ${styles.heroText} mr-2`}>
+              <h2 className={`${styles.fadeInOne} ${styles.heroText} me-2`}>
                 Adventures
               </h2>
-              <h2 className={`${styles.fadeInTwo} ${styles.heroText} mr-2`}>
+              <h2 className={`${styles.fadeInTwo} ${styles.heroText} me-2`}>
                 in
               </h2>
-              <h2 className={`${styles.fadeInThree} ${styles.heroText} mr-2`}>
+              <h2 className={`${styles.fadeInThree} ${styles.heroText} me-2`}>
                 Software
               </h2>
               <h2 className={`${styles.fadeInFour} ${styles.heroText}`}>
@@ -180,7 +178,7 @@ const IndexPage = props => {
       <section id="portfolio" className="container bg-white my-4">
         <div className={`anchor row ${styles.featuredWork}`}>
           <div className="col-12 px-0">
-            <Slider {...projectSlickSettings}>
+            <div>
               {/* <div className="carousel-item px-2">
                 <div className="card rounded-0">
                   <div className="card-body row">
@@ -272,7 +270,7 @@ const IndexPage = props => {
                   </div>
                 </div>
               </div> */}
-            </Slider>
+            </div>
           </div>
         </div>
       </section>
@@ -303,7 +301,7 @@ const IndexPage = props => {
             <a
               href={resumeURL}
               download="Ryan Johnson's Resume"
-              className={`font-weight-bold ${styles.buttonDownload} align-items-center text-decoration-none p-2 d-flex justify-content-center mr-1`}
+              className={`fw-bold ${styles.buttonDownload} align-items-center text-decoration-none p-2 d-flex justify-content-center mr-1`}
             >
               Resume
             </a>
